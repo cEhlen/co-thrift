@@ -1,0 +1,27 @@
+{
+  "name": "co-thrift",
+  "version": "0.1.0",
+  "description": "Co wrapper for thrift clients.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cEhlen/co-thrift.git"
+  },
+  "keywords": [
+    "thrift",
+    "co"
+  ],
+  "author": "Christoph Ehlen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cEhlen/co-thrift/issues"
+  },
+  "homepage": "https://github.com/cEhlen/co-thrift",
+  "dependencies": {
+    "thunkify": "^2.1.2",
+    "underscore": "^1.6.0"
+  }
+}
