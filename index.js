@@ -4,6 +4,9 @@ var thunkify = require('thunkify'),
 // Just wrapts the client inside thunkify so we can use generators.
 // We just use every method except the send_* and recieve_* methods.
 module.exports = function (client) {
+    if (client.__co_thrift) {
+      return client;
+    }
     _.chain(client.prototype)
         .pairs()
         .each(function (pair) {
@@ -11,6 +14,6 @@ module.exports = function (client) {
                 client.prototype[pair[0]] = thunkify(pair[1]);
             }
         });
-
+    client.__co_thrift = true;
     return client;
 };

@@ -7,6 +7,8 @@ The wrapper just searches the prototype for every method, which does not start
 with `send_` or `recv_` and replaces it with a version you can yield. This may
 not be save, but it works for my purpose.
 
+WARNING: The client prototype gets changed. This could be a problem.
+
 Installation
 ============
 
