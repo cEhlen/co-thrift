@@ -10,7 +10,7 @@ module.exports = function (client) {
     _.chain(client.prototype)
         .pairs()
         .each(function (pair) {
-            if(_.isFunction(pair[1]) && !(/send_.*/.test(pair[0]) || /recv_.*/.test(pair[0]))) {
+            if(_.isFunction(pair[1]) && !(/send_.*/.test(pair[0]) || /recv_.*/.test(pair[0]) || /seqid/.test(pair[0]))) {
                 client.prototype[pair[0]] = thunkify(pair[1]);
             }
         });
